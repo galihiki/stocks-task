@@ -1,0 +1,23 @@
+.trendUp{
+    color: #093;
+}
+
+.trendDown{
+    color: #ff333a;
+}
+
+.stockName{
+    color: #0081f2;
+    font-size: 18px;
+}
+.stockValue{
+    font-weight: 600;
+}
+.stockInfo{
+    margin-left: 5%;
+    margin-top: 70px;
+    min-width: 25%;
+}
+.main{
+    background-color: #f1f1f1;
+}

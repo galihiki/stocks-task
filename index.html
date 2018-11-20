@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="stocks">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>stock task</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Angular Material Library -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>-->
+    <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+    <div class="main" ng-controller="StocksController">
+        <div ng-repeat="stock in stocksInfo">
+            <div layout="row">
+                <div class="stockInfo">
+                    <span class="stockName">{{stock.name}}</span>
+                    <span>({{stock.symbol}})</span>
+                    <div class="stockValue">Value: {{stock.currentValue}}</div>
+                    <md-icon class="trendUp" ng-if="stock.trend == 'up'">arrow_upward</md-icon>
+                    <md-icon class="trendDown" ng-if="stock.trend == 'down'">arrow_downward</mdS-icon>
+                    <div>{{stock.trend}}</div>
+                </div>
+                <div id="container{{stock.symbol}}"></div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script src="app.js"></script> 
+</body>
+</html>
